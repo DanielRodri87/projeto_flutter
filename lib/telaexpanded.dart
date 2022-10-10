@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/tela_inicial.dart';
 import 'package:flutter_application_1/filtros.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter_application_1/teladados1.dart';
+import 'package:flutter_application_1/teladados2.dart';
+import 'package:flutter_application_1/teladados3.dart';
+import 'package:flutter_application_1/teladados4.dart';
 
 Future<String> loadAsset() async {
   return await rootBundle.loadString('assets/config.json');
@@ -77,7 +81,14 @@ class _MyWidgetState extends State<TelaExpanded> {
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
                           splashColor: Colors.black26,
-                          onTap: () {},
+                          onTap: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const TelaDados1()
+                                ),
+                              ),
+                            },
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -107,7 +118,14 @@ class _MyWidgetState extends State<TelaExpanded> {
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
                           splashColor: Colors.black26,
-                          onTap: () {},
+                          onTap: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const TelaDados2()
+                                ),
+                              ),
+                            },
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -137,7 +155,14 @@ class _MyWidgetState extends State<TelaExpanded> {
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
                           splashColor: Colors.black26,
-                          onTap: () {},
+                          onTap: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const TelaDados3()
+                                ),
+                              ),
+                            },
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -167,7 +192,14 @@ class _MyWidgetState extends State<TelaExpanded> {
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       child: InkWell(
                           splashColor: Colors.black26,
-                          onTap: () {},
+                          onTap: () => {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const TelaDados4()
+                                ),
+                              ),
+                            },
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
