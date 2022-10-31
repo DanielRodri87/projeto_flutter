@@ -11,84 +11,74 @@ class TelaDados1 extends StatelessWidget {
           fontSize: 25,
           color: Color.fromARGB(255, 233, 233, 233),
         ),
-        backgroundColor: const Color.fromARGB(255, 17, 41, 50),
+        backgroundColor: const Color.fromARGB(255, 39, 46, 91),
         title: const Text('Dados dos imóveis'),
       ),
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                Color.fromARGB(255, 17, 41, 50), 
-                Color.fromARGB(255, 17, 80, 95), 
-              ]
+          image: DecorationImage(
+            image: NetworkImage(
+                'https://www.historiasdecasa.com.br/wp-content/uploads/2021/09/capa-webstories-casa-iuri-westwing.jpg'),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      child: SizedBox(
-          child: Column(
-            children: const [
-              SizedBox(
-                height: 70,
-              ),
-              Text(
-                'Imóvel: Chácara',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  //TextAlign.right
+
+        child: Center(
+          child: Card(
+            color: const Color.fromARGB(255, 39, 46, 91).withOpacity(0.8),
+            elevation: 90,
+            margin: const EdgeInsets.all(50),  
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const ListTile(
+                  leading: Icon(Icons.home),
+                  
+                  title: Text('Imóvel'),
+                  subtitle: Text('Valor diária: RS 100,00'),
+                  iconColor: Color.fromARGB(255, 233, 233, 233),
+                  textColor: Color.fromARGB(255, 233, 233, 233),
                 ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Text(
-                'Valor diário: 450',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white
+                const ListTile(
+                  leading: Icon(Icons.location_on),
+                  iconColor: Color.fromARGB(255, 233, 233, 233),
+                  title: Text('Endereço: R. Florêncio Joaquim Rodrigues, 419'),
+                  textColor: Color.fromARGB(255, 233, 233, 233),
+
                 ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Text(
-                'Enderço: Rua Fernando Cota',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white
+                const ListTile(
+                  leading: Icon(Icons.phone),
+                  title: Text('Telefone: (89) 994 5640-10'),
+                  iconColor: Color.fromARGB(255, 233, 233, 233),
+                  textColor: Color.fromARGB(255, 233, 233, 233),
+
                 ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Text(
-                'Contato: (xx)xxxxx-xxxx',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    TextButton(
+                      child: const Text('Reservar'),
+                      onPressed: () {/* ... */},
+                    ),
+                    const SizedBox(width: 8),
+                    TextButton(
+                      child: const Text('Cancelar'),
+                      onPressed: () {/* ... */},
+                    ),
+                    const SizedBox(width: 8),                    
+                  ],
                 ),
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              
-              Image(
-                image: NetworkImage(
-                  'https://www.elasviajando.com.br/wp-content/uploads/2021/06/hotel-com-vista-para-o-mar-no-rj-7-845x550.jpg'),
-                  fit: BoxFit.cover,
-                  width: 250,
-                  height: 220,
-              ),
-              
-            ],
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+
+
 
